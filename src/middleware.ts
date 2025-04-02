@@ -4,6 +4,9 @@ import type { NextRequest } from 'next/server'
 // Spécifier explicitement l'environnement d'exécution Node.js
 export const runtime = 'nodejs'
 
+// Indiquer à Next.js de ne pas compiler ce middleware comme une Edge Function
+export const unstable_skipMiddlewareUrlNormalize = true
+
 export function middleware(request: NextRequest) {
   // Check if the request is for the dashboard
   if (request.nextUrl.pathname.startsWith('/dashboard')) {

@@ -1,0 +1,9 @@
+{
+  "buildCommand": "next build",
+  "framework": "nextjs",
+  "functions": {
+    "src/middleware.ts": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}

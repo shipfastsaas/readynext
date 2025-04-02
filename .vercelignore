@@ -1,0 +1,5 @@
+# Ignorer les modules qui posent problème avec les Edge Functions
+node_modules/next-auth
+node_modules/oauth
+node_modules/oidc-token-hash
+node_modules/openid-client
