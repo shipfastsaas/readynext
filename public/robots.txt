@@ -1,0 +1,11 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.shipfastsaas.com/sitemap.xml
+
+# Prevent crawling of private routes
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /admin/

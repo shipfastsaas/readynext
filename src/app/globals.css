@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gradient-start: #0056B3;
+    --gradient-end: #4A90E2;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --background: #FFFFFF;
+    --background-secondary: #F8F8F8;
+    --surface: #FFFFFF;
+    --surface-secondary: #F5F5F5;
+  }
+
+  .dark {
+    --text-primary: #E5E5E5;
+    --text-secondary: #94A3B8;
+    --background: #0F172A;
+    --background-secondary: #1E293B;
+    --surface: #293548;
+    --surface-secondary: #334155;
+  }
+}
+
+.gradient-text {
+  @apply bg-gradient-primary inline-block text-transparent bg-clip-text;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Global background styles */
+body {
+  @apply bg-background text-text-primary;
+}
+
+/* Section alternating backgrounds */
+section {
+  @apply bg-background;
+}
+
+section:nth-child(even) {
+  @apply bg-background-secondary;
+}
+
+/* Gradient background for buttons and elements */
+.gradient-background {
+  @apply bg-gradient-to-r from-[#0056B3] to-[#4A90E2];
+}
+
+.gradient-background:hover {
+  @apply opacity-90;
+}
+
+/* Gradient background with transparency */
+.gradient-background-10 {
+  @apply bg-gradient-to-r from-[#0056B3]/10 to-[#4A90E2]/10;
+}
+
+.gradient-background-30 {
+  @apply bg-gradient-to-r from-[#0056B3]/30 to-[#4A90E2]/30;
+}
