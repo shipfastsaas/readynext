@@ -3,15 +3,6 @@ const nextConfig = {
   // Désactiver la génération statique pour les routes API
   experimental: {
     workerThreads: false,
-    // Désactiver les Edge Functions pour le middleware
-    instrumentationHook: false,
-    // Forcer l'utilisation de Node.js pour le middleware
-    runtime: 'nodejs'
-  },
-  // Désactiver explicitement les Edge Functions pour le middleware
-  middleware: {
-    // Forcer l'utilisation de Node.js pour le middleware
-    runtime: 'nodejs'
   },
   // Configuration ESLint et TypeScript
   eslint: {
