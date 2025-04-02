@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
+// Spécifier explicitement l'environnement d'exécution Node.js
+export const runtime = 'nodejs'
+
 export function middleware(request: NextRequest) {
   // Check if the request is for the dashboard
   if (request.nextUrl.pathname.startsWith('/dashboard')) {
